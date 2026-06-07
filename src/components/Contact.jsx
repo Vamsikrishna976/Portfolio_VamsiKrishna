@@ -50,7 +50,7 @@ export default function Contact() {
       Icon: FiDownload,
       label: 'Resume',
       value: 'Download PDF',
-      href: '/vamsi-krishna-paluru-resume.pdf',
+      href: '/VamsiKrishna_Paluru_Resume.pdf',
       iconBg: 'rgba(16,185,129,0.1)',
       iconColor: 'var(--accent-emerald)',
       download: true,
