@@ -1,16 +1,94 @@
-# React + Vite
+# Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React portfolio website built with Vite. The app showcases a developer's skills, experience, projects, certifications, education, achievements, blog, and contact details in an animated, responsive single-page layout.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project is a personal portfolio site built with React and Vite. It includes:
 
-## React Compiler
+- Animated hero and landing sections
+- Custom cursor and mouse gradient effects
+- Particle background animation
+- Smooth fade-in loading screen
+- Section-based portfolio layout with responsive design
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Mobile-friendly responsive layout
+- Animated page transitions with Framer Motion
+- Custom cursor and mouse-gradient interaction
+- Particle background using `tsparticles`
+- Animated counters and section reveals
+- Portfolio sections for Skills, Experience, Projects, Certifications, Education, Achievements, Blog, and Contact
+- Navbar navigation and footer
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React 19
+- Vite
+- Framer Motion
+- React Icons
+- React Type Animation
+- React CountUp
+- React Intersection Observer
+- tsparticles
+- ESLint
+
+## Getting Started
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start development server:
+
+```bash
+npm run dev
+```
+
+Build production bundle:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Scripts
+
+- `npm run dev` - start Vite development server
+- `npm run build` - build production bundle
+- `npm run preview` - preview production build locally
+- `npm run lint` - run ESLint
+
+## Project Structure
+
+- `src/App.jsx` - application entry point and section layout
+- `src/index.css` - global styles
+- `src/components/` - reusable UI components and portfolio sections
+  - `Navbar.jsx`
+  - `LoadingScreen.jsx`
+  - `CustomCursor.jsx`
+  - `ParticleBackground.jsx`
+  - `Hero.jsx`
+  - `About.jsx`
+  - `Skills.jsx`
+  - `Experience.jsx`
+  - `Projects.jsx`
+  - `Certifications.jsx`
+  - `Education.jsx`
+  - `Achievements.jsx`
+  - `Blog.jsx`
+  - `Contact.jsx`
+  - `Footer.jsx`
+  - `MouseGradient.jsx`
+
+## Notes
+
+This repository is intended as a developer portfolio showcase with animation effects, clean section layout, and modern frontend interactions.
