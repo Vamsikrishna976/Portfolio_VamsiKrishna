@@ -312,7 +312,8 @@ ${form.message}
             >
               {sent ? (
                 <>
-                  <FiCheck size={16} /> Message Sent!
+                  <FiCheck size={16} />✅ Thank you! Your message has been sent
+                  successfully. I'll get back to you soon.
                 </>
               ) : sending ? (
                 <span
