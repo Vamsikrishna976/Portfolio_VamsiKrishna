@@ -57,23 +57,23 @@ export default function Contact() {
 ${form.message}
 `;
 
-      const phoneNumber = "919985936366";
+      // const phoneNumber = "919985936366";
 
-      window.open(
-        `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-          whatsappMessage,
-        )}`,
-        "_blank",
-      );
+      // window.open(
+      //   `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      //     whatsappMessage,
+      //   )}`,
+      //   "_blank",
+      // );
 
-      setSent(true);
+      // setSent(true);
 
-      setForm({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
+      // setForm({
+      //   name: "",
+      //   email: "",
+      //   subject: "",
+      //   message: "",
+      // });
 
       setTimeout(() => setSent(false), 5000);
     } catch (error) {

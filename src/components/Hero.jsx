@@ -1,14 +1,30 @@
-import { motion } from 'framer-motion';
-import { TypeAnimation } from 'react-type-animation';
-import { FiArrowDown, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
+import { FiArrowDown, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import IntroVideo from "./IntroVideo";
 
 const FLOATING_ICONS = [
-  { icon: '⚛️', label: 'React', style: { top: '8%', left: '5%' }, delay: 0 },
-  { icon: '🟨', label: 'JS', style: { top: '15%', right: '8%' }, delay: 0.2 },
-  { icon: '☕', label: 'Java', style: { bottom: '20%', left: '2%' }, delay: 0.4 },
-  { icon: '🍃', label: 'MongoDB', style: { bottom: '10%', right: '5%' }, delay: 0.6 },
-  { icon: '📱', label: 'Flutter', style: { top: '50%', left: '0%' }, delay: 0.3 },
-  { icon: '🔷', label: 'TS', style: { top: '40%', right: '2%' }, delay: 0.5 },
+  { icon: "⚛️", label: "React", style: { top: "8%", left: "5%" }, delay: 0 },
+  { icon: "🟨", label: "JS", style: { top: "15%", right: "8%" }, delay: 0.2 },
+  {
+    icon: "☕",
+    label: "Java",
+    style: { bottom: "20%", left: "2%" },
+    delay: 0.4,
+  },
+  {
+    icon: "🍃",
+    label: "MongoDB",
+    style: { bottom: "10%", right: "5%" },
+    delay: 0.6,
+  },
+  {
+    icon: "📱",
+    label: "Flutter",
+    style: { top: "50%", left: "0%" },
+    delay: 0.3,
+  },
+  { icon: "🔷", label: "TS", style: { top: "40%", right: "2%" }, delay: 0.5 },
 ];
 
 const floatVariant = (delay = 0) => ({
@@ -18,7 +34,7 @@ const floatVariant = (delay = 0) => ({
     transition: {
       duration: 4 + delay,
       repeat: Infinity,
-      ease: 'easeInOut',
+      ease: "easeInOut",
       delay,
     },
   },
@@ -26,22 +42,25 @@ const floatVariant = (delay = 0) => ({
 
 export default function Hero() {
   const scrollToAbout = () => {
-    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
   };
 
   const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
   };
 
   const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section className="hero" id="hero">
       <div className="hero-bg-gradient" />
 
-      <div className="container" style={{ position: 'relative', zIndex: 1, width: '100%' }}>
+      <div
+        className="container"
+        style={{ position: "relative", zIndex: 1, width: "100%" }}
+      >
         <div className="hero-content">
           {/* LEFT CONTENT */}
           <div>
@@ -62,7 +81,8 @@ export default function Hero() {
               transition={{ delay: 0.3 }}
             >
               <span className="gradient-text">Vamsi Krishna</span>
-              <br />Paluru
+              <br />
+              Paluru
             </motion.h1>
 
             <motion.div
@@ -73,17 +93,22 @@ export default function Hero() {
             >
               <TypeAnimation
                 sequence={[
-                  'React Developer', 2000,
-                  'Frontend Engineer', 2000,
-                  'Aspiring MERN Stack Developer', 2000,
-                  'JavaScript Developer', 2000,
-                  'Frontend Developer', 2000,
+                  "React Developer",
+                  2000,
+                  "Frontend Engineer",
+                  2000,
+                  "Aspiring MERN Stack Developer",
+                  2000,
+                  "JavaScript Developer",
+                  2000,
+                  "Frontend Developer",
+                  2000,
                 ]}
                 wrapper="span"
                 speed={50}
                 deletionSpeed={60}
                 repeat={Infinity}
-                style={{ color: 'var(--text-secondary)' }}
+                style={{ color: "var(--text-secondary)" }}
                 cursor={true}
               />
             </motion.div>
@@ -94,10 +119,11 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.55 }}
             >
-              Passionate Frontend Developer with experience building scalable web
-              applications using React.js, JavaScript, MERN Stack, and modern UI
-              technologies. Focused on creating seamless user experiences and
-              continuously expanding expertise toward Full-Stack Development.
+              Passionate Frontend Developer with experience building scalable
+              web applications using React.js, JavaScript, MERN Stack, and
+              modern UI technologies. Focused on creating seamless user
+              experiences and continuously expanding expertise toward Full-Stack
+              Development.
             </motion.p>
 
             <motion.div
@@ -109,7 +135,11 @@ export default function Hero() {
               <button className="btn btn-primary" onClick={scrollToProjects}>
                 View Projects →
               </button>
-              <a href="/VamsiKrishna_Paluru_Resume.pdf" className="btn btn-secondary" download>
+              <a
+                href="/VamsiKrishna_Paluru_Resume.pdf"
+                className="btn btn-secondary"
+                download
+              >
                 <FiArrowDown size={16} />
                 Download Resume
               </a>
@@ -126,10 +156,10 @@ export default function Hero() {
               transition={{ delay: 0.75 }}
             >
               {[
-                { value: '5+', label: 'Projects Built' },
-                { value: '10+', label: 'Technologies' },
-                { value: '1', label: 'Internship' },
-              ].map(s => (
+                { value: "5+", label: "Projects Built" },
+                { value: "10+", label: "Technologies" },
+                { value: "1", label: "Internship" },
+              ].map((s) => (
                 <div className="hero-stat" key={s.label}>
                   <span className="hero-stat-value">{s.value}</span>
                   <span className="hero-stat-label">{s.label}</span>
@@ -139,16 +169,28 @@ export default function Hero() {
 
             {/* Social Links */}
             <motion.div
-              style={{ display: 'flex', gap: '12px', marginTop: '28px' }}
+              style={{ display: "flex", gap: "12px", marginTop: "28px" }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.85 }}
             >
               {[
-                { icon: <FiGithub />, href: 'https://github.com/Vamsikrishna976', label: 'GitHub' },
-                { icon: <FiLinkedin />, href: 'https://www.linkedin.com/in/vamsi-krishna-paluru/', label: 'LinkedIn' },
-                { icon: <FiMail />, href: 'mailto:paluruvamsikrishna16@gmail.com', label: 'Gmail' },
-              ].map(s => (
+                {
+                  icon: <FiGithub />,
+                  href: "https://github.com/Vamsikrishna976",
+                  label: "GitHub",
+                },
+                {
+                  icon: <FiLinkedin />,
+                  href: "https://www.linkedin.com/in/vamsi-krishna-paluru/",
+                  label: "LinkedIn",
+                },
+                {
+                  icon: <FiMail />,
+                  href: "mailto:paluruvamsikrishna16@gmail.com",
+                  label: "Gmail",
+                },
+              ].map((s) => (
                 <a
                   key={s.label}
                   href={s.href}
@@ -169,14 +211,17 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4, duration: 0.7, type: 'spring', bounce: 0.3 }}
-              style={{ position: 'relative' }}
+              transition={{
+                delay: 0.4,
+                duration: 0.7,
+                type: "spring",
+                bounce: 0.3,
+              }}
+              style={{ position: "relative" }}
             >
               <div className="hero-avatar-container">
                 <div className="hero-avatar-ring" />
-                <div className="hero-avatar">
-                  <span style={{ position: 'relative', zIndex: 1 }}>VK</span>
-                </div>
+                <IntroVideo />
               </div>
 
               {/* Floating Icons */}
@@ -188,7 +233,7 @@ export default function Hero() {
                     style={fi.style}
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.6 + fi.delay, type: 'spring' }}
+                    transition={{ delay: 0.6 + fi.delay, type: "spring" }}
                     variants={floatVariant(fi.delay)}
                     whileInView="animate"
                   >
@@ -208,7 +253,7 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
         onClick={scrollToAbout}
-        style={{ cursor: 'none' }}
+        style={{ cursor: "none" }}
       >
         <div className="scroll-mouse">
           <div className="scroll-wheel" />
