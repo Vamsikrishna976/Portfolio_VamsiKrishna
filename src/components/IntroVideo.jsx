@@ -36,7 +36,7 @@ export default function IntroVideo() {
     >
       <video
         ref={videoRef}
-        src="/intro.mp4"
+        src="/intro1.mp4"
         poster="/introthumbnail.png"
         style={{
           width: "100%",
